@@ -1,0 +1,13 @@
+<div>
+    <input type="text" placeholder="Buscar residencias..." (input)="onSearch($event)">
+    <div *ngIf="loading" class="loading">Cargando...</div>
+    <div *ngIf="!loading">
+      <ng-container *ngFor="let residence of residences">
+        <div class="card">
+          <h4>{{ residence.title }}</h4>
+          <p>{{ residence.description }}</p>
+          <p><strong>Precio:</strong> {{ residence.price }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
