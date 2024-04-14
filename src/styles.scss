@@ -1,6 +1,27 @@
+// Define variables de colores para un fácil mantenimiento
+$color-borde: #ccc;
+$color-carga: tomato;
+$color-titulo: #010101;
+$color-precio: green;
+$fondo-tarjeta: #fff;
+
 /* You can add global styles to this file, and also import other style files */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #010101;
+}
+
+.loading {
+    color: $color-carga;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid $color-borde;
+    border-radius: 15px;
 }

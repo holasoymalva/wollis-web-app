@@ -1,12 +1,13 @@
 <div class="search-container">
-    <input type="text" placeholder="Buscar residencias..." (input)="onSearch($event)">
-    <div *ngIf="loading" class="loading">Cargando...</div>
+    <input type="text" placeholder="Search residences ..." (input)="onSearch($event)">
+    <div *ngIf="loading" class="loading">loading ...</div>
     <div *ngIf="!loading">
       <ng-container *ngFor="let residence of residences">
         <div class="card">
           <h4>{{ residence.title }}</h4>
+          <img [src]="residence.image" alt="{{ residence.title }}"><
           <p>{{ residence.description }}</p>
-          <p><strong>Precio:</strong> {{ residence.price }}</p>
+          <p><strong>Price :</strong> {{ residence.price }}</p>
         </div>
       </ng-container>
     </div>

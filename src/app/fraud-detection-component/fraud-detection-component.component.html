@@ -1,0 +1,5 @@
+<div class="fraud-container">
+    <input type="text" (input)="onAnalystFraud($event)" placeholder="Enter text to classify">
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="response" style="color: white;">Classification: {{ response }}</div>
+</div>

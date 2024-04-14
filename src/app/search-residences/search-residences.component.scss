@@ -1,9 +1,4 @@
-// Define variables de colores para un fácil mantenimiento
-$color-borde: #ccc;
-$color-carga: tomato;
-$color-titulo: #010101;
-$color-precio: green;
-$fondo-tarjeta: #fff;
+
 
 // Aplicar un reset básico para los márgenes y paddings
 * {
@@ -70,11 +65,4 @@ input[type="text"] {
     color: $color-precio;
     font-weight: bold;
   }
-}
-
-// Estilizar el indicador de carga
-.loading {
-  color: $color-carga;
-  font-size: 1.5em;
-  text-align: center;
 }
