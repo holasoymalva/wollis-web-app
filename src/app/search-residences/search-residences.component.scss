@@ -1,9 +1,80 @@
-.card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-top: 10px;
+// Define variables de colores para un fácil mantenimiento
+$color-borde: #ccc;
+$color-carga: tomato;
+$color-titulo: #010101;
+$color-precio: green;
+$fondo-tarjeta: #fff;
+
+// Aplicar un reset básico para los márgenes y paddings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: $color-titulo;
+}
+
+.search-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: $color-titulo;
+  border-radius: 5px;
+}
+
+.search-container {
+  padding: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid $color-borde;
+  border-radius: 15px;
+}
+
+// Estilizar las tarjetas
+.card {
+  background-color: $fondo-tarjeta;
+  border: 1px solid $color-borde;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  // Ajustar la imagen para que sea responsiva y mantenga su relación de aspecto
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  // Estilizar los títulos
+  h4 {
+    margin-bottom: 10px;
+    color: $color-titulo;
+    font-size: 1.25em;
+  }
+  
+  // Estilizar las descripciones
+  p {
+    margin-bottom: 10px;
+    color: darken($color-titulo, 20%);
+  }
+  
+  // Destacar el precio
+  p strong {
+    color: $color-precio;
+    font-weight: bold;
+  }
+}
+
+// Estilizar el indicador de carga
 .loading {
-    color: red;
+  color: $color-carga;
+  font-size: 1.5em;
+  text-align: center;
 }
